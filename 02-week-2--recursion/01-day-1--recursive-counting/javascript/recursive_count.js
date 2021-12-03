@@ -1,9 +1,9 @@
 function recursiveCount(num = 0) {
-  if(num > 10){
+  if(num > 9){
     return "done"
   } else {
-    console.log(num)
     num += 1
+    console.log(num)
     recursiveCount(num)
   }
 }
