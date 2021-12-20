@@ -59,3 +59,6 @@ module.exports = romanNumeral;
 // - return num
 
 // And a written explanation of your solution
+// - First I initialize an empty array where I will store integer values from the string and a num variable with a value of zero
+// - I loop through the string and assign each character with its corresponding value using if else statements (I = 1, V = 5, etc.). If there's a match, I push that into the empty array.
+// - Once the string loop is finished, I loop through the new array of integers. If the element is less than the next one, I subtract the value from num. If it is greater, I add the value to num. Finally, we return num to get our integer.
