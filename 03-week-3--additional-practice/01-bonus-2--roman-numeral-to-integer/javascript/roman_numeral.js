@@ -44,6 +44,9 @@ if (require.main === module) {
 
   console.log("Expecting: 402");
   console.log(romanNumeral('CDII'));
+
+  console.log("Expecting: 1999");
+  console.log(romanNumeral('MCMXCIX'));
 }
 
 module.exports = romanNumeral;

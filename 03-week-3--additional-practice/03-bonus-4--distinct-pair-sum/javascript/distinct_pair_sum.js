@@ -6,7 +6,7 @@ function distinctPairSum(arr, k) {
     if(sum === k){
       pairsArr.unshift([arr[i], arr[i + 1]])
       }
-    }
+  }
 }
 
 if (require.main === module) {
