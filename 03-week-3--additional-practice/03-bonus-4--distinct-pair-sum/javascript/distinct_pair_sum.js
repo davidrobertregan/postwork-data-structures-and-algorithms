@@ -1,12 +1,22 @@
 function distinctPairSum(arr, k) {
   let pairsArr = []
+  let matchArr = []
   
   for(let i = 0; i < arr.length; i++){
     let sum = arr[i] + arr[i + 1]
+    let sumArr = [arr[i], arr[i + 1]]
     if(sum === k){
-      pairsArr.unshift([arr[i], arr[i + 1]])
+      for(let i = 0; i < pairsArr.length; i++){
+        if(pairsArr[i][0] === sumArr[0] || sumArr[1] && pairsArr[i][1] === sumArr[0] || sumArr[1]){
+          matchArr.push("match")
+        }
       }
+      if(matchArr.length === 0){
+        pairsArr.unshift([arr[i], arr[i + 1]])
+        }
+      } 
   }
+  return pairsArr
 }
 
 if (require.main === module) {
@@ -33,3 +43,4 @@ module.exports = distinctPairSum;
 
 
 // And a written explanation of your solution
+// first I initialize a new array where we will store pairs. Then we create a for loop where we add the sibling elements in our array to check if they add up to the targeted sum. If they do, we then loop through the Pairs array to check for matches using logical operators. We need to see if the first element in the array of the pairsArr is equal to either the first or second value of the pair we just grabbed. 
